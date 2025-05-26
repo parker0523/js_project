@@ -1,0 +1,284 @@
+/* Global Styles */
+:root {
+    --primary-color: #f09199;
+    --secondary-color: #76c9bd;
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+body {
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .bg{
+    background: transparent url(../img/bg_musume.png) left 50% no-repeat;
+    float: left;
+    display: block;
+    text-indent: -9999px;
+    width: 40px;
+    height: 50px;
+}
+
+.navbar .musume_1{
+   background-position: -40px 0;
+}
+.navbar .musume_2{
+    background-position: -80px 0;
+}
+.navbar .musume_3{
+    background-position: -120px 0;
+}
+.navbar .musume_4{
+    background-position: -160px 0;
+}
+.navbar .musume_5{
+    background-position: -200px 0;
+}
+
+.navbar-brand img {
+    transition: transform 0.2s;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Anime Cards */
+.anime-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.anime-card .card-body {
+    padding: 1rem;
+}
+
+.anime-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.anime-info {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Rating Stars */
+.rating {
+    color: #ffc107;
+    font-size: 0.875rem;
+}
+
+/* View Controls */
+.view-controls .btn {
+    padding: 0.375rem 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.view-controls .btn.active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+/* List View Styles */
+.list-view .anime-card {
+    display: flex;
+    height: 150px;
+}
+
+.list-view .anime-card img {
+    width: 100px;
+    height: 150px;
+}
+
+.list-view .card-body {
+    flex: 1;
+}
+
+/* Footer Styles */
+footer {
+    border-top: 1px solid var(--border-color);
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.social-links a {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .list-view .anime-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .list-view .anime-card img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loading::after {
+    content: "加载中...";
+    display: inline-block;
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "加载中."; }
+    40% { content: "加载中.."; }
+    60%, 100% { content: "加载中..."; }
+}
+
+/* Category Items */
+.category-section .row {
+    margin: 0 -8px;
+}
+
+.category-section .col {
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.category-item {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.category-item .image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-item .item-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.category-item .item-followers {
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #999;
+}
+
+/* Hover effects */
+.category-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.category-item:hover .overlay {
+    opacity: 1;
+}
+
+.category-item:hover .item-title {
+    bottom: auto;
+    top: 0;
+    background: none;
+}
+
+/* User Activities */
+.activity-list {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 16px;
+    background: white;
+}
+
+.activity-item {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item .user-name {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.activity-item .activity-title {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.activity-item .activity-type {
+    color: #666;
+    font-size: 0.875rem;
+} 
