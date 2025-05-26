@@ -15,18 +15,7 @@ A static frontend clone of bangumi.tv built with vanilla JavaScript, HTML5, CSS3
 - jQuery 3.7.1
 - Bootstrap 5.3.2
 
-## Setup
-1. Clone this repository
-2. Open `index.html` in your web browser
-3. No server setup required as this is a static website
-
-## Project Structure
-```
-.
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── README.md
-``` 
+## Todo
+- 完善首页css样式
+- 新增四个页面：动画、书籍、游戏、音乐
+- 新增一个示例的作品详情页，点击每个作品都跳转到这个页面
