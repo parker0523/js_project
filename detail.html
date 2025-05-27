@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Pockets - Bangumi 番组计划</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/detail.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="bg musume_1"></div>
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="Bangumi">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">动画</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">游戏</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">书籍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">音乐</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="搜索作品...">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Left Sidebar -->
+            <div class="col-md-3">
+                <div class="sidebar-content">
+                    <!-- Cover Image -->
+                    <div class="cover-section mb-4">
+                        <img src="https://lain.bgm.tv/r/400/pic/cover/l/23/ce/363957_pgptl.jpg" alt="Summer Pockets" class="cover-img">
+                        <div class="rating-box mt-3">
+                            <div class="rating">
+                                <span class="score">8.7</span>
+                                <span class="max">/10</span>
+                            </div>
+                            <div class="rating-info">
+                                <div class="rank">Rank #123</div>
+                                <div class="count">12,453人评分</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Section -->
+                    <div class="sidebar-section mb-4">
+                        <div id="staff-list" class="info-list">
+                            <!-- Staff info will be loaded here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Column -->
+            <div class="col-md-9">
+                <!-- Title Section -->
+                <div class="detail-header mb-4">
+                    <h1 class="title">Summer Pockets</h1>
+                    <div class="subtitle">サマーポケッツ</div>
+                    <div class="info-tags">
+                        <span class="tag">动画</span>
+                        <span class="tag">TV</span>
+                        <span class="tag">2025年4月</span>
+                    </div>
+                </div>
+
+                <!-- Summary Section -->
+                <div class="row">
+                    <div class="detail-section col-lg-7 mb-4">
+                        <!-- <h3 class="section-title">简介</h3> -->
+                        <div class="summary">
+                            <p>唯有那份眩目，未曾忘却。</p>
+
+                            <p>为了整理去世祖母的遗物，主人公鹰原羽依里利用暑假来到了鸟白岛。
+                            在帮忙收拾祖母的回忆之物的同时，他一边对首次接触的"岛上生活"感到困惑，一边逐渐适应。</p>
+
+                            <p>与眺望大海的少女相遇，</br>
+                            与寻找不可思议蝴蝶的少女相遇，</br>
+                            与寻找回忆与海盗船的少女相遇，</br>
+                            与住在宁静灯塔中的少女相遇，</p>
+
+                            <p>在岛上，他结交了新的伙伴──</p>
+                        </div>
+                                <!-- Tags Section -->
+                        <div class="detail-section mb-4 tags-cloud-section">
+                            <h3 class="tags-cloud-title">大家将 Summer Pockets 标注为</h3>
+                            <div class="tags-cloud">
+                                <a href="#" class="tag"><span class="tag-text">key</span><span class="tag-count">1287</span></a>
+                                <a href="#" class="tag"><span class="tag-text">恋爱</span><span class="tag-count">1057</span></a>
+                                <a href="#" class="tag"><span class="tag-text">TV</span><span class="tag-count">931</span></a>
+                                <a href="#" class="tag"><span class="tag-text">游戏改</span><span class="tag-count">906</span></a>
+                                <a href="#" class="tag"><span class="tag-text">GAL改</span><span class="tag-count">159</span></a>
+                                <a href="#" class="tag"><span class="tag-text">Feel.</span><span class="tag-count">816</span></a>
+                                <a href="#" class="tag"><span class="tag-text">2025年4月</span><span class="tag-count">100</span></a>
+                                <a href="#" class="tag"><span class="tag-text">麻枝准</span><span class="tag-count">624</span></a>
+                                <a href="#" class="tag"><span class="tag-text">治愈</span><span class="tag-count">506</span></a>
+                                <a href="#" class="tag"><span class="tag-text">2025</span><span class="tag-count">467</span></a>
+                                <a href="#" class="tag"><span class="tag-text">日本</span><span class="tag-count">401</span></a>
+                                <a href="#" class="tag"><span class="tag-text">催泪</span><span class="tag-count">31</span></a>
+                                <a href="#" class="tag"><span class="tag-text">TV动画</span><span class="tag-count">102</span></a>
+                                <a href="#" class="tag"><span class="tag-text">galgame</span><span class="tag-count">13</span></a>
+                                <a href="#" class="tag"><span class="tag-text">未定档</span><span class="tag-count">49</span></a>
+                                <a href="#" class="tag"><span class="tag-text">日常</span><span class="tag-count">39</span></a>
+                                <a href="#" class="tag"><span class="tag-text">2025年</span><span class="tag-count">21</span></a>
+                                <a href="#" class="tag"><span class="tag-text">后宫</span><span class="tag-count">19</span></a>
+                                <a href="#" class="tag"><span class="tag-text">奇幻</span><span class="tag-count">14</span></a>
+                                <a href="#" class="tag"><span class="tag-text">原创</span><span class="tag-count">13</span></a>
+                                <a href="#" class="tag"><span class="tag-text">4月</span><span class="tag-count">9</span></a>
+                                <a href="#" class="tag"><span class="tag-text">未确定</span><span class="tag-count">6</span></a>
+                                <a href="#" class="tag"><span class="tag-text">小原好美</span><span class="tag-count">5</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "status-container col-lg-4">
+                        <div class = "status-box-title">
+                            <h3>收藏盒</h3>
+                        </div>
+                        <div class = "info-list">
+                            <div class = "info-item">
+                                <div class = "status-box">
+                                    <div class="status-line">
+                                        <span>我在看这部动画</span>
+                                        <a href="#" class="delete-link">删除</a>
+                                    </div>
+                                    <div class="time-line">
+                                        <span class="actual-time">2025-5-9 19:00</span>
+                                        <span class="separator">/</span>
+                                        <span class="relative-time">18天4小时前</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "info-item">
+                                <div class = "completeness-box">
+                                    <div class = "completeness">
+                                        我的完成度
+                                    </div>
+                                    <div class = "completeness-bar">
+                                        <div class="completeness-bar-fill" style="width: 0%"></div>
+                                    </div>
+                                    <div class = "completeness-text">
+                                        <div class="completeness-input-group">
+                                            <input type="text" class="completeness-input" placeholder="0">
+                                            <span>/ 26</span>
+                                        </div>
+                                        <button class="completeness-button">更新</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Section -->
+                <div class="detail-section mb-4">
+                    <h3 class="section-title">角色介绍</h3>
+                    <div class="character-list row row-cols-3">
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="img/chara_avatar_1.jpg" alt="鹰原羽依里" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">鹰原羽依里</div>
+                                    <div class="character-cv">CV: 千葉翔也</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="img/chara_avatar_2.jpg" alt="鸣濑白羽" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">鸣濑白羽</div>
+                                    <div class="character-cv">CV: 小原好美</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/44/e9/59847_crt_1BrIm.jpg?r=1726452108" alt="空门苍" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">空门苍</div>
+                                    <div class="character-cv">CV: 高森奈津美</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/aa/ca/59848_crt_YlLXl.jpg?r=1682925900" alt="久岛鸥" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">久岛鸥</div>
+                                    <div class="character-cv">CV: 稗田寧々</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/c5/5c/59849_crt_OekBv.jpg?r=1726452140" alt="䌷文德斯" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">䌷文德斯</div>
+                                    <div class="character-cv">CV: 岩井映美里</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/8c/96/61419_crt_tHS5A.jpg?r=1726458548" alt="加藤海未" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">加藤海未</div>
+                                    <div class="character-cv">CV: 田中あいみ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/58/1e/61417_crt_8XuuI.jpg?r=1726452168" alt="野村美希" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">野村美希</div>
+                                    <div class="character-cv">CV: 一宮朔</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/f8/c5/61418_crt_vx7i4.jpg?r=1726452192" alt="水织静久" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">水织静久</div>
+                                    <div class="character-cv">CV: 小山さほみ</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="character-card">
+                                <img src="https://lain.bgm.tv/pic/crt/g/35/d4/61457_crt_cSLgB.jpg?r=1726401020" alt="岬镜子" class="character-img">
+                                <div class="character-info">
+                                    <div class="character-name">岬镜子</div>
+                                    <div class="character-cv">CV: 高本めぐみ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Works Section -->
+                <div class="detail-section mb-4">
+                    <h3 class="section-title">关联作品</h3>
+                    <div class="related-works row">
+                        <div class="col-md-3 col-6 mb-3">
+                            <div class="related-work-card">
+                                <img src="img/related_1.jpg" alt="Summer Pockets 游戏" class="work-img">
+                                <div class="work-info">
+                                    <div class="work-title">Summer Pockets</div>
+                                    <div class="work-type">游戏</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More related works... -->
+                    </div>
+                </div>
+
+                <!-- Copyright Section -->
+                <div class="detail-section mb-4">
+                    <div class="copyright">
+                        <p>©VISUAL ARTS/Key/鳥白島観光協会</p>
+                        <p>官方网站：<a href="https://summerpockets-anime.jp" target="_blank">summerpockets-anime.jp</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>关于我们</h5>
+                    <p>Bangumi 是一个专注于动画、音乐、游戏等 ACG 文化的网络社区。</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>快速链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">使用帮助</a></li>
+                        <li><a href="#">开发者 API</a></li>
+                        <li><a href="#">成为贡献者</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>关注我们</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Bangumi Clone. 仅供学习使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/staffData.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html> 

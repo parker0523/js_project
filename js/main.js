@@ -2,36 +2,36 @@
 const sampleAnimeData = [
     {
         id: 1,
-        title: "进击的巨人 最终季",
-        originalTitle: "進撃の巨人 The Final Season",
-        image: "https://lain.bgm.tv/pic/cover/l/0b/dd/326851_1hF3K.jpg",
-        rating: 4.5,
-        episodes: 16,
-        status: "已完结",
+        title: "时光流逝，饭菜依旧美味",
+        originalTitle: "日々は過ぎれど飯うまし",
+        image: "./img/anime_1.jpg",
+        rating: 3.7,
+        episodes: 12,
+        status: "连载中",
         type: "TV",
-        airDate: "2024-01"
+        airDate: "2025-04"
     },
     {
         id: 2,
-        title: "咒术回战 第二季",
-        originalTitle: "呪術廻戦 第2期",
-        image: "https://lain.bgm.tv/pic/cover/l/86/3c/425196_qD38U.jpg",
-        rating: 4.8,
-        episodes: 23,
+        title: "赛马娘 芦毛灰姑娘",
+        originalTitle: "ウマ娘 シンデレラグレイ",
+        image: "./img/anime_2.jpg",
+        rating: 4.5,
+        episodes: 13,
         status: "连载中",
         type: "TV",
-        airDate: "2023-07"
+        airDate: "2025-04"
     },
     {
         id: 3,
-        title: "葬送的芙莉莲",
-        originalTitle: "葬送のフリーレン",
-        image: "https://lain.bgm.tv/pic/cover/l/cb/3f/425203_u5658.jpg",
-        rating: 4.7,
-        episodes: 28,
+        title: "mono女孩",
+        originalTitle: "mono",
+        image: "./img/anime_3.jpg",
+        rating: 3.8,
+        episodes: 12,
         status: "连载中",
         type: "TV",
-        airDate: "2023-09"
+        airDate: "2025-04"
     }
 ];
 
@@ -45,25 +45,25 @@ const categoryData = {
         { id: 5, title: "BanG Dream! Ave Mujica ", image: "https://lain.bgm.tv/r/400/pic/cover/l/77/c3/454684_ZH5tU.jpg", followers: 11234 }
     ],
     games: [
-        { id: 1, title: "塞尔达传说：王国之泪", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 7654 },
-        { id: 2, title: "霍格沃茨之遗", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 6543 },
-        { id: 3, title: "最终幻想16", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 8765 },
-        { id: 4, title: "星空", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 5432 },
-        { id: 5, title: "生化危机4重制版", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 9876 }
+        { id: 1, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
+        { id: 2, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
+        { id: 3, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
+        { id: 4, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
+        { id: 5, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
     ],
     books: [
-        { id: 1, title: "无职转生", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 4321 },
-        { id: 2, title: "86-不存在的战区", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 5432 },
-        { id: 3, title: "魔法使之夜", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 6543 },
-        { id: 4, title: "Re:从零开始的异世界生活", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 7654 },
-        { id: 5, title: "刀剑神域", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 8765 }
+        { id: 1, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
+        { id: 2, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
+        { id: 3, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
+        { id: 4, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
+        { id: 5, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
     ],
     music: [
-        { id: 1, title: "YOASOBI - アイドル", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 3456 },
-        { id: 2, title: "米津玄師 - LADY", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 4567 },
-        { id: 3, title: "Official髭男dism - Subtitle", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 5678 },
-        { id: 4, title: "King Gnu - 一途", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 6789 },
-        { id: 5, title: "Mrs. GREEN APPLE - ケセラセラ", image: "https://lain.bgm.tv/pic/cover/l/c7/76/371492_u1uG8.jpg", followers: 7890 }
+        { id: 1, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
+        { id: 2, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
+        { id: 3, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
+        { id: 4, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
+        { id: 5, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
     ]
 };
 
@@ -201,10 +201,15 @@ function loadUserActivities() {
 function createActivityItem(activity) {
     return `
         <div class="activity-item">
-            <a href="#" class="user-name">${activity.userName}</a>
-            <span class="activity-type">${activity.action}</span>
-            <a href="#" class="activity-title">${activity.title}</a>
-            <div class="text-muted small">${activity.time}</div>
+            <img src="img/icon.jpg" alt="${activity.userName}" class="user-avatar">
+            <div class="activity-content">
+                <div>
+                    <a href="#" class="user-name">${activity.userName}</a>
+                    <span class="activity-type">${activity.action}</span>
+                    <a href="#" class="activity-title">${activity.title}</a>
+                </div>
+                <div class="text-muted small">${activity.time}</div>
+            </div>
         </div>
     `;
 } 
