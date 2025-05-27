@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画频道 - Bangumi Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="bg musume_1"></div>
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="Bangumi">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="anime.html" id="animeDropdown" role="button" aria-expanded="false">
+                            动画
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">每日放送</a></li>
+                            <li><a class="dropdown-item" href="#">动画标签</a></li>
+                            <li><a class="dropdown-item" href="#">分类浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">动画日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我看</h6></li>
+                            <li><a class="dropdown-item" href="#">在看</a></li>
+                            <li><a class="dropdown-item" href="#">想看</a></li>
+                            <li><a class="dropdown-item" href="#">看过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="book.html" id="animeDropdown" role="button" aria-expanded="false">
+                            书籍
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">图书标签</a></li>
+                            <li><a class="dropdown-item" href="#">分类浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">图书日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我读</h6></li>
+                            <li><a class="dropdown-item" href="#">在读</a></li>
+                            <li><a class="dropdown-item" href="#">想读</a></li>
+                            <li><a class="dropdown-item" href="#">读过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="music.html" id="animeDropdown" role="button" aria-expanded="false">
+                            音乐
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">音乐标签</a></li>
+                            <li><a class="dropdown-item" href="#">浏览全部</a></li>
+                            <li><a class="dropdown-item" href="anime.html">音乐日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我听</h6></li>
+                            <li><a class="dropdown-item" href="#">在听</a></li>
+                            <li><a class="dropdown-item" href="#">想听</a></li>
+                            <li><a class="dropdown-item" href="#">听过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="game.html" id="animeDropdown" role="button" aria-expanded="false">
+                            游戏
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">游戏标签</a></li>
+                            <li><a class="dropdown-item" href="#">平台浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">游戏日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我玩</h6></li>
+                            <li><a class="dropdown-item" href="#">在玩</a></li>
+                            <li><a class="dropdown-item" href="#">想玩</a></li>
+                            <li><a class="dropdown-item" href="#">玩过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="搜索作品...">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <h3 class="head-title mb-4">动画频道</h3>
+            <div class="col-lg-9">
+                <!-- 注目动画 -->
+                <section class="featured-anime-highlights mb-4">
+                    <h3 class="section-title">注目动画 <small class="text-muted" style="font-size: 14px; color: #999999;">根据最近30日标记</small></h3>
+                    <div class="horizontal-scroll-container">
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/d3/5d/531159_BayD9.jpg" alt="日々は過ぎれど飯うまし">
+                            <a class="item-title" href="#">日々は過ぎれど飯うまし </a>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/6e/1a/509986_99qsc.jpg" alt="アポカリプスホテル">
+                            <div class="item-title">アポカリプスホテル</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/a6/39/485936_y0bX8.jpg" alt="mono">
+                            <div class="item-title">mono</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/23/ce/363957_pgptl.jpg" alt="Summer Pockets">
+                            <div class="item-title">Summer Pockets</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/27/84/526816_i7w6d.jpg" alt="Summer Pockets">
+                            <div class="item-title">機動戦士Gundam GQuuuuuuX</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/9e/fa/509297_VQ3P9.jpg" alt="ウマ娘 シンデレラグレイ">
+                            <div class="item-title">ウマ娘 シンデレラグレイ</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/5e/4f/506672_K9EQT.jpg" alt="ウィッチウォッチ">
+                            <div class="item-title">ウィッチウォッチ</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/01/d5/504950_WmdZx.jpg" alt="リコリス・リコイル Friends are thieves of time.">
+                            <div class="item-title">リコリス・リコイル Friends are thieves of time.</div>
+                        </div>
+                        <div class="scroll-image-item">
+                            <img src="https://lain.bgm.tv/r/400/pic/cover/l/15/a3/491569_R42i0.jpg" alt="忍者と殺し屋のふたりぐらし">
+                            <div class="item-title">忍者と殺し屋のふたりぐらし</div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- 动画日志 -->
+                <section class="anime-log-section mb-4">
+                    <h3 class="section-title">动画日志 <a href="#" class="more-link-style">...more</a></h3>
+                    <div id="anime-log-list" class="row">
+                    </div>
+                </section>
+
+                <!-- 好友最近关注的动画 -->
+                <section class="friends-activity-section mb-4">
+                    <h3 class="section-title">好友最近关注的动画</h3>
+                    <div id="friends-watched-list">
+                        <div class="d-inline-block text-center me-2">
+                            <img src="https://bgm.tv/img/no_img.gif" alt="Friend">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 所有动画的最新讨论 -->
+                <section class="latest-discussions-section mb-4">
+                    <h3 class="section-title">所有动画的最新讨论</h3>
+                    <div id="latest-discussions-list">
+                        <div class="discussion-item">
+                            <a href="#" class="discussion-title">对key社的作品审美疲劳了 (+1)</a>
+                            <div class="discussion-meta">
+                                <a href="#">"Summer Pockets"</a> - <a href="#">Blindfruit</a> - 2025-05-27
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar (Right) -->
+            <div class="col-lg-3">
+                <div class="sidebar-section">
+                    <h5>分类</h5>
+                    <div class="filter-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">全部</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">TV</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">WEB</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">OVA</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">剧场版</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">动态漫画</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">其他</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h5>来源</h5>
+                    <div class="filter-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">全部</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">原创</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">漫画改</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">游戏改</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">小说改</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h5>类型</h5>
+                    <div class="filter-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">科幻</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">喜剧</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">百合</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">校园</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">惊悚</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">后宫</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">机战</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">悬疑</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">恋爱</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">奇幻</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">推理</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">运动</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h5>时间</h5>
+                    <div class="filter-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">来年们</button>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2025年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2024年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2023年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2022年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2021年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2020年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <div class="year-month-container">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">2019年</button>
+                        <div class="month-picker-dropdown">
+                                <button type="button" class="month-btn">1月</button>
+                                <button type="button" class="month-btn">2月</button>
+                                <button type="button" class="month-btn">3月</button>
+                                <button type="button" class="month-btn">4月</button>
+                                <button type="button" class="month-btn">5月</button>
+                                <button type="button" class="month-btn">6月</button>
+                                <button type="button" class="month-btn">7月</button>
+                                <button type="button" class="month-btn">8月</button>
+                                <button type="button" class="month-btn">9月</button>
+                                <button type="button" class="month-btn">10月</button>
+                                <button type="button" class="month-btn">11月</button>
+                                <button type="button" class="month-btn">12月</button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">往年们</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h5>标签汇总 <a href="#" class="more-link-style">...more</a></h5>
+                    <div id="tag-summary-list">
+                        <span class="tag-list-item">TV</span>
+                        <span class="tag-list-item">漫画改</span>
+                        <span class="tag-list-item">剧场版</span>
+                        <span class="tag-list-item">搞笑</span>
+                        <span class="tag-list-item">原创</span>
+                        <span class="tag-list-item">轻小说改</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>关于我们</h5>
+                    <p>Bangumi 是一个专注于动画、音乐、游戏等 ACG 文化的网络社区。</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>快速链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">使用帮助</a></li>
+                        <li><a href="#">开发者 API</a></li>
+                        <li><a href="#">成为贡献者</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>关注我们</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Bangumi Clone. 仅供学习使用。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+        // Call function for general anime list if it exists and is needed on this pages
+        if (typeof loadAllAnime === 'function') {
+            // loadAllAnime('#all-anime-list'); // Decide if this is needed for anime.html
+        }
+
+        // Call functions specific to anime.html content
+        if (typeof loadAnimePageLog === 'function') {
+            loadAnimePageLog();
+        }
+        if (typeof loadAnimePageDiscussions === 'function') {
+            loadAnimePageDiscussions();
+        }
+    });
+    </script>
+</body>
+</html>

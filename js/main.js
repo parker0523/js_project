@@ -208,3 +208,120 @@ function createActivityItem(activity) {
         </div>
     `;
 } 
+
+// Function to load anime page logs
+function loadAnimePageLog() {
+    if ($('#anime-log-list').length) {
+        const $logContainer = $('#anime-log-list');
+        $logContainer.empty();
+        const sampleLogs = [
+            {
+                imgSrc: "https://lain.bgm.tv/pic/cover/s/8f/8a/445827_L6Zh0.jpg",
+                title: "一般的剧情, 不错的画风, 总之我挺喜欢",
+                user: "liyun1021",
+                action: "评论",
+                animeName: "ギルドの受付嬢ですが、残業は嫌なのでボスをソロ討伐しようと思います",
+                time: "2小时前",
+                content: "剧情一般, 有些说不通或者靠气势解决一切的剧情, 反正是爽番就不用带脑子看了。画风个人很...",
+                plus: "(+1)" // Assuming you want the plus from previous examples
+            },
+            {
+                imgSrc: "https://lain.bgm.tv/pic/cover/s/4e/a0/770_EvrMq.jpg",
+                title: "“西蒙不是神”——这不是一部无脑燃的作品",
+                user: "孤独者们",
+                action: "评论",
+                animeName: "天元突破グレンラガン",
+                time: "2小时31分钟前",
+                content: "为什么不复活尼亚? 反螺旋族连临时宇宙都造得出来, 螺旋力在他们之上的西蒙怎么会做不到复...",
+                plus: "(+0)"
+            },
+            {
+                imgSrc: "https://lain.bgm.tv/pic/cover/s/13/c5/400602_ZI8Y9.jpg",
+                title: "葬送的芙莉莲简评",
+                user: "今生",
+                action: "评论",
+                animeName: "葬送のフリーレン",
+                time: "2小时32分钟前",
+                content: "反传统的叙事结构与主题创新。在《鬼灭之刃》《咒术回战》等快节奏作品主导的市场中，《...",
+                plus: "(+1)"
+            },
+            {
+                imgSrc: "https://lain.bgm.tv/pic/cover/s/77/c3/454684_ZH5tU.jpg",
+                title: "世人昨日看错了我母鸡卡, 今日, 又看错了。(接吐槽)",
+                user: "合河五柳",
+                action: "评论",
+                animeName: "BanG Dream! Ave Mujica",
+                time: "2小时56分钟前",
+                content: "我们见识到了一部少女乐队动画史上, 最浓墨重彩的一部动画。你们说我应该多花笔墨塑造m...",
+                plus: "(+1)"
+            },
+            {
+                imgSrc: "https://lain.bgm.tv/pic/photo/g/94/5e/933294_ml4i6.jpg",
+                title: "8集最大记忆",
+                user: "Fulcrum233",
+                action: "评论",
+                animeName: "LAZARUS",
+                time: "10小时11分钟前",
+                content: "那个爽朗的笑容让人回想起了速度与激情",
+                plus: "(+1)"
+            },
+            {
+                imgSrc: "https://lain.bgm.tv/pic/photo/g/a5/b7/604126_6g23B.jpg",
+                title: "起源故事的意外教训最后和解正当化,怪味",
+                user: "划船的苹果",
+                action: "评论",
+                animeName: "Spider-Man: Across the Spider-Verse",
+                time: "1天前",
+                content: "炫技动画精致炖＊，看到那群被制作技术力高忽悠 然后天天狂吹的ylg不服，我这种闲人现在重看 ...",
+                plus: "(+0)"
+            }
+        ];
+
+        sampleLogs.forEach(log => {
+            const logHtml = `
+                <div class="col-md-6">
+                    <div class="log-entry">
+                        <img src="${log.imgSrc}" alt="Anime Cover" class="log-entry-image">
+                        <div class="log-entry-details">
+                            <a href="#" class="log-entry-title">${log.title}</a>
+                            <div class="log-entry-meta">
+                                <a href="#">${log.user}</a> / ${log.action} <a href="#">${log.animeName}</a> / ${log.time}
+                            </div>
+                            <p class="log-entry-content">${log.content}</p>
+                            <div class="log-entry-plus">${log.plus}</div>
+                        </div>
+                    </div>
+                </div>`;
+            $logContainer.append(logHtml);
+        });
+    }
+}
+
+function loadAnimePageDiscussions() {
+    if ($('#latest-discussions-list').length) {
+        const $discussionsContainer = $('#latest-discussions-list');
+        $discussionsContainer.empty();
+        const discussions = [
+            { title: "对key社的作品审美疲劳了 (+1)", anime: "Summer Pockets", user: "Blindfruit", date: "2025-05-27" },
+            { title: "泛式谈GQuuuuuuX第七话:非常喜欢这一集 (+7)", anime: "機動戰士Gundam GQuuuuuuX", user: "楚轩", date: "2025-05-27" },
+            { title: "第七集杀伤力有点大 (+3)", anime: "mono", user: "宫内莲华", date: "2025-05-27" },
+            { title: "所以磨合指的是哪种关系 (没看过原作) (+0)", anime: "義妹生活", user: "Kaguya", date: "2025-05-27" },
+            { title: "有关各主角所修的专业 (+14)", anime: "日々は過ぎれど飯うまし", user: "AkariSam", date: "2025-05-27" },
+            { title: "不懂这个评分怎么来的 (+7)", anime: "忍者と殺し屋のふたりぐらし", user: "白雪的骑士", date: "2025-05-27" }
+        ];
+        discussions.forEach(disc => {
+            const discussionHtml = `
+                <div class="discussion-item">
+                    <div class="discussion-item-main">
+                        <a href="#" class="discussion-item-title">${disc.title}</a>
+                        <div class="discussion-item-anime">"${disc.anime}"</div>
+                    </div>
+                    <div class="discussion-item-meta-right">
+                        <span class="discussion-item-user">${disc.user}</span>
+                        <span class="discussion-item-date">${disc.date}</span>
+                    </div>
+                </div>`;
+            $discussionsContainer.append(discussionHtml);
+        });
+    }
+}
