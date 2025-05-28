@@ -16,8 +16,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <div class="bg musume_1"></div>
-            <a class="navbar-brand" href="index.html">
+            <div class = "bg musume_1"></div>
+            <a class="navbar-brand" href="#">
                 <img src="./img/logo.png" alt="Bangumi">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,19 +26,80 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">首页</a>
+                        <a class="nav-link active" href="index.html">首页</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">动画</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="anime.html" id="animeDropdown" role="button" aria-expanded="false">
+                            动画
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">每日放送</a></li>
+                            <li><a class="dropdown-item" href="#">动画标签</a></li>
+                            <li><a class="dropdown-item" href="#">分类浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">动画日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我看</h6></li>
+                            <li><a class="dropdown-item" href="#">在看</a></li>
+                            <li><a class="dropdown-item" href="#">想看</a></li>
+                            <li><a class="dropdown-item" href="#">看过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">游戏</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="book.html" id="animeDropdown" role="button" aria-expanded="false">
+                            书籍
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">图书标签</a></li>
+                            <li><a class="dropdown-item" href="#">分类浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">图书日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我读</h6></li>
+                            <li><a class="dropdown-item" href="#">在读</a></li>
+                            <li><a class="dropdown-item" href="#">想读</a></li>
+                            <li><a class="dropdown-item" href="#">读过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">书籍</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="anime.html" id="animeDropdown" role="button" aria-expanded="false">
+                            音乐
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">音乐标签</a></li>
+                            <li><a class="dropdown-item" href="#">浏览全部</a></li>
+                            <li><a class="dropdown-item" href="anime.html">音乐日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我听</h6></li>
+                            <li><a class="dropdown-item" href="#">在听</a></li>
+                            <li><a class="dropdown-item" href="#">想听</a></li>
+                            <li><a class="dropdown-item" href="#">听过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">音乐</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="anime.html" id="animeDropdown" role="button" aria-expanded="false">
+                            游戏
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">游戏标签</a></li>
+                            <li><a class="dropdown-item" href="#">平台浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">游戏日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我玩</h6></li>
+                            <li><a class="dropdown-item" href="#">在玩</a></li>
+                            <li><a class="dropdown-item" href="#">想玩</a></li>
+                            <li><a class="dropdown-item" href="#">玩过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -60,7 +121,7 @@
                     <!-- Cover Image -->
                     <div class="cover-section mb-4">
                         <img src="https://lain.bgm.tv/r/400/pic/cover/l/23/ce/363957_pgptl.jpg" alt="Summer Pockets" class="cover-img">
-                        <div class="rating-box mt-3">
+                        <!-- <div class="rating-box mt-3">
                             <div class="rating">
                                 <span class="score">8.7</span>
                                 <span class="max">/10</span>
@@ -69,7 +130,7 @@
                                 <div class="rank">Rank #123</div>
                                 <div class="count">12,453人评分</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Info Section -->
@@ -177,7 +238,35 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class = "info-item">
+                                <div class = "user-info-box">
+                                    <img src="img/icon.jpg" alt="User Avatar" class="user-avatar">
+                                    <div class="rating-info">
+                                        <div class="rating-line">
+                                            <span class="rating-score">7.3788</span>
+                                            <span class="rating-text">推荐</span>
+                                        </div>
+                                        <div class="anime-rank">Bangumi Anime Ranked:#1134</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="user-rating-box">
+                                    <div class="user-rating-text">我的评价: 还行</div>
+                                    <div class="user-rating-stars">
+                                        <i class="fas fa-star" data-rating="1" title="不忍直视"></i>
+                                        <i class="fas fa-star" data-rating="2" title="很差"></i>
+                                        <i class="fas fa-star" data-rating="3" title="差"></i>
+                                        <i class="fas fa-star" data-rating="4" title="较差"></i>
+                                        <i class="fas fa-star" data-rating="5" title="不过不失"></i>
+                                        <i class="fas fa-star" data-rating="6" title="还行"></i>
+                                        <i class="fas fa-star" data-rating="7" title="推荐"></i>
+                                        <i class="fas fa-star" data-rating="8" title="力荐"></i>
+                                        <i class="fas fa-star" data-rating="9" title="神作"></i>
+                                        <i class="fas fa-star" data-rating="10" title="超神作"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,113 +276,121 @@
                     <h3 class="section-title">角色介绍</h3>
                     <div class="character-list row row-cols-3">
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="img/chara_avatar_1.jpg" alt="鹰原羽依里" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">鹰原羽依里</div>
                                     <div class="character-cv">CV: 千葉翔也</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="img/chara_avatar_2.jpg" alt="鸣濑白羽" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">鸣濑白羽</div>
                                     <div class="character-cv">CV: 小原好美</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/44/e9/59847_crt_1BrIm.jpg?r=1726452108" alt="空门苍" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">空门苍</div>
                                     <div class="character-cv">CV: 高森奈津美</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/aa/ca/59848_crt_YlLXl.jpg?r=1682925900" alt="久岛鸥" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">久岛鸥</div>
                                     <div class="character-cv">CV: 稗田寧々</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/c5/5c/59849_crt_OekBv.jpg?r=1726452140" alt="䌷文德斯" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">䌷文德斯</div>
                                     <div class="character-cv">CV: 岩井映美里</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/8c/96/61419_crt_tHS5A.jpg?r=1726458548" alt="加藤海未" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">加藤海未</div>
                                     <div class="character-cv">CV: 田中あいみ</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/58/1e/61417_crt_8XuuI.jpg?r=1726452168" alt="野村美希" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">野村美希</div>
                                     <div class="character-cv">CV: 一宮朔</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/f8/c5/61418_crt_vx7i4.jpg?r=1726452192" alt="水织静久" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">水织静久</div>
                                     <div class="character-cv">CV: 小山さほみ</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col mb-3">
-                            <div class="character-card">
+                            <a class="character-card text-reset text-decoration-none" href = "character.html">
                                 <img src="https://lain.bgm.tv/pic/crt/g/35/d4/61457_crt_cSLgB.jpg?r=1726401020" alt="岬镜子" class="character-img">
                                 <div class="character-info">
                                     <div class="character-name">岬镜子</div>
                                     <div class="character-cv">CV: 高本めぐみ</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Related Works Section -->
                 <div class="detail-section mb-4">
-                    <h3 class="section-title">关联作品</h3>
-                    <div class="related-works row">
-                        <div class="col-md-3 col-6 mb-3">
-                            <div class="related-work-card">
-                                <img src="img/related_1.jpg" alt="Summer Pockets 游戏" class="work-img">
-                                <div class="work-info">
-                                    <div class="work-title">Summer Pockets</div>
-                                    <div class="work-type">游戏</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- More related works... -->
+                    <h3 class="section-title">关联条目</h3>
+                    <div class="related-works">
+                        <!-- to insert related works -->
                     </div>
                 </div>
 
-                <!-- Copyright Section -->
+                <!-- Comments Section -->
                 <div class="detail-section mb-4">
-                    <div class="copyright">
-                        <p>©VISUAL ARTS/Key/鳥白島観光協会</p>
-                        <p>官方网站：<a href="https://summerpockets-anime.jp" target="_blank">summerpockets-anime.jp</a></p>
+                    <h3 class="section-title">评论</h3>
+                    <div class="comments-list">
+                        <!-- Comments will be inserted here by JavaScript -->
                     </div>
                 </div>
+
+                <!-- Discussion Board Section -->
+                <div class="detail-section mb-4">
+                    <h3 class="section-title">讨论版</h3>
+                    <div class="discussion-board-list">
+                        <!-- Discussions will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Comments Box Section -->
+                <div class="detail-section mb-4">
+                    <h3 class="section-title">吐槽箱</h3>
+                    <div class="comments-box-list">
+                        <!-- Comments box items will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -333,7 +430,6 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/staffData.js"></script>
     <script src="js/detail.js"></script>
 </body>
 </html> 
