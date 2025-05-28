@@ -259,12 +259,26 @@ footer a:hover {
 }
 
 .activity-item {
+    display: flex;
+    align-items: start;
     padding: 8px 0;
     border-bottom: 1px solid var(--border-color);
 }
 
 .activity-item:last-child {
     border-bottom: none;
+}
+
+.activity-item .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.activity-item .activity-content {
+    flex: 1;
 }
 
 .activity-item .user-name {
@@ -281,6 +295,10 @@ footer a:hover {
 .activity-item .activity-type {
     color: #666;
     font-size: 0.875rem;
+}
+
+.activity-item .text-muted {
+    margin-top: 2px;
 } 
 
 /* Navbar Dropdown on Hover */
