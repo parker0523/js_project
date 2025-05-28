@@ -46,37 +46,37 @@ const categoryData = {
     ],
     games: [
         { id: 1, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
-        { id: 2, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
-        { id: 3, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
-        { id: 4, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
-        { id: 5, title: "Clair Obscur: Expedition 33", image: "./img/game_sample.jpg", followers: 7654 },
+        { id: 2, title: "明日方舟", image: "https://lain.bgm.tv/r/400/pic/cover/l/b5/34/225878_ox8Ax.jpg", followers: 5135 },
+        { id: 3, title: "エッチで一途なド田舎兄さまと、古式ゆかしい病弱妹", image: "https://lain.bgm.tv/r/400/pic/cover/l/ed/c0/470980_4SfOR.jpg", followers: 3526 },
+        { id: 4, title: "Summer Pockets REFLECTION BLUE", image: "https://lain.bgm.tv/r/400/pic/cover/l/ab/76/295957_H64uh.jpg", followers: 1733 },
+        { id: 5, title: "魔法使いの夜", image: "https://lain.bgm.tv/r/400/pic/cover/l/7d/3e/5418_VTRT4.jpg", followers: 1631 },
     ],
     books: [
         { id: 1, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
-        { id: 2, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
-        { id: 3, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
-        { id: 4, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
-        { id: 5, title: "異世界迷宮の最深部を目指そう", image: "./img/book_sample.jpg", followers: 4321 },
+        { id: 2, title: "異世界迷宮の最深部を目指そう(2)", image: "https://lain.bgm.tv/r/400/pic/cover/l/34/81/167119_jp.jpg", followers: 1231 },
+        { id: 3, title: "異世界迷宮の最深部を目指そう(3)", image: "https://lain.bgm.tv/r/400/pic/cover/l/a7/bb/167120_jp.jpg", followers: 5131 },
+        { id: 4, title: "異世界迷宮の最深部を目指そう(4)", image: "https://lain.bgm.tv/r/400/pic/cover/l/a9/d6/167122_jp.jpg", followers: 1613 },
+        { id: 5, title: "異世界迷宮の最深部を目指そう(5)", image: "https://lain.bgm.tv/r/400/pic/cover/l/58/f6/167123_jp.jpg", followers: 1919 },
     ],
     music: [
-        { id: 1, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
-        { id: 2, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
-        { id: 3, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
-        { id: 4, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
-        { id: 5, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 8433 },
+        { id: 1, title: "夏草が邪魔をする", image: "https://lain.bgm.tv/r/400/pic/cover/l/ed/d0/214575_D4s6L.jpg", followers: 8433 },
+        { id: 2, title: "負け犬にアンコールはいらない", image: "./img/music_sample.jpg", followers: 1346 },
+        { id: 3, title: "藍二乗", image: "https://lain.bgm.tv/pic/cover/c/99/2a/270751_h0Nzk.jpg", followers: 9349 },
+        { id: 4, title: "だから僕は音楽を辞めた", image: "https://lain.bgm.tv/pic/cover/c/2b/f1/273441_Z791Q.jpg", followers: 1611 },
+        { id: 5, title: "エルマ", image: "https://lain.bgm.tv/pic/cover/c/c2/07/283367_lG7eZ.jpg", followers: 4591 },
     ]
 };
 
 // Sample user activities
 const userActivities = [
-    { userId: "白玉", userName: "白玉", action: "看过", title: "间谍过家家", time: "5分钟前" },
-    { userId: "青空", userName: "青空", action: "想看", title: "莉可丽丝", time: "10分钟前" },
-    { userId: "樱花", userName: "樱花", action: "看过", title: "孤独摇滚！", time: "15分钟前" },
-    { userId: "星月", userName: "星月", action: "想看", title: "电锯人", time: "20分钟前" },
-    { userId: "流星", userName: "流星", action: "看过", title: "死神 千年血战篇", time: "25分钟前" },
-    { userId: "雨滴", userName: "雨滴", action: "想看", title: "塞尔达传说：王国之泪", time: "30分钟前" },
-    { userId: "彩虹", userName: "彩虹", action: "看过", title: "最终幻想16", time: "35分钟前" },
-    { userId: "云朵", userName: "云朵", action: "想看", title: "无职转生", time: "40分钟前" }
+    { userId: "1", userName: "yybbz", action: "看过", title: "间谍过家家", time: "5分钟前" },
+    { userId: "2", userName: "辉之钥", action: "想看", title: "莉可丽丝", time: "10分钟前" },
+    { userId: "3", userName: "冥桦", action: "看过", title: "孤独摇滚！", time: "15分钟前" },
+    { userId: "4", userName: "ksbsjssb", action: "想看", title: "电锯人", time: "20分钟前" },
+    { userId: "5", userName: "Elysia", action: "看过", title: "死神 千年血战篇", time: "25分钟前" },
+    { userId: "6", userName: "雪野百香里", action: "想看", title: "塞尔达传说：王国之泪", time: "30分钟前" },
+    { userId: "7", userName: "泰山陨石坠", action: "看过", title: "最终幻想16", time: "35分钟前" },
+    { userId: "8", userName: "牢大", action: "想看", title: "无职转生", time: "40分钟前" }
 ];
 
 // Initialize the page when DOM is ready
@@ -117,6 +117,7 @@ function createAnimeCard(anime, isFeatured) {
     
     return `
         <div class="${colClass}">
+            <a href="detail.html" class="text-reset text-decoration-none">
             <div class="anime-card">
                 <img src="${anime.image}" alt="${anime.title}" class="card-img-top">
                 <div class="card-body">
@@ -132,6 +133,7 @@ function createAnimeCard(anime, isFeatured) {
                     </div>
                 </div>
             </div>
+            </a>
         </div>
     `;
 }
@@ -175,11 +177,13 @@ function createCategoryItem(item) {
     return `
         <div class="col">
             <div class="category-item">
-                <div class="image-container">
-                    <img src="${item.image}" alt="${item.title}">
-                    <div class="overlay"></div>
-                    <div class="item-title" title="${item.title}">${item.title}</div>
-                </div>
+                <a href="detail.html"> 
+                    <div class="image-container">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="overlay"></div>
+                        <div class="item-title" title="${item.title}">${item.title}</div>
+                    </div>
+                </a>
                 <div class="item-followers">${item.followers.toLocaleString()} 人关注</div>
             </div>
         </div>

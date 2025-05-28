@@ -1,0 +1,140 @@
+/* Character Page Styles */
+
+/* Cover Image */
+.cover-img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.info-item {
+    padding: 0;
+    border-bottom: none;
+}
+
+.info-list .info-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-list .info-item:last-child {
+    border-bottom: none;
+}
+
+.info-list .label {
+    color: #666;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.info-list .label::after {
+    content: ":";
+    margin-right: 0.25rem;
+}
+
+.info-list .value {
+    color: #333;
+    flex: 1;
+}
+
+/* Title Section */
+.detail-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Summary Section */
+.summary {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Comments Box */
+.comments-box-list {
+    margin-top: 20px;
+}
+
+.comments-box-item {
+    margin-bottom: 20px;
+}
+
+.comments-box-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.comment-bubble {
+    flex: 1;
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: 12px;
+    position: relative;
+}
+
+.comment-bubble:before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 15px;
+    border-style: solid;
+    border-width: 8px 8px 8px 0;
+    border-color: transparent #f8f9fa transparent transparent;
+}
+
+.comment-header {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #333;
+    margin-right: 5px;
+}
+
+.comment-title {
+    color: #666;
+    margin-right: 10px;
+}
+
+.comment-time {
+    color: #999;
+}
+
+.comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+} 
