@@ -1,0 +1,80 @@
+.profile-card-sm .card-body {
+    padding: 0.5rem;
+    text-align: center; 
+}
+
+.profile-card-sm .card-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-card-sm .btn {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+}
+
+.profile-activity-item {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.profile-activity-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+
+.profile-activity-item .user-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.profile-activity-item .item-details-img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.profile-card-sm img.card-img-top {
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+.sidebar-section h5 {
+    font-size: 1rem;
+    color: #f09199;
+    border-bottom: 1px solid #f09199;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-section ul {
+    font-size: 0.85rem;
+}
+
+.sidebar-section ul a {
+    color: #0084B4;
+    text-decoration: none;
+}
+
+.sidebar-section ul a:hover {
+    text-decoration: underline;
+}
+
+.daily-broadcast-item-sidebar img {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+}
+
+.nav-sm .nav-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+}

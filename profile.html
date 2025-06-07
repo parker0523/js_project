@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - Bangumi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (Copy the exact navbar structure from index.html here) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class = "bg musume_1"></div>
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="Bangumi">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="anime.html" id="animeDropdown" role="button" aria-expanded="false">
+                            动画
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="animeDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">每日放送</a></li>
+                            <li><a class="dropdown-item" href="#">动画标签</a></li>
+                            <li><a class="dropdown-item" href="#">分类浏览</a></li>
+                            <li><a class="dropdown-item" href="anime.html">动画日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我看</h6></li>
+                            <li><a class="dropdown-item" href="#">在看</a></li>
+                            <li><a class="dropdown-item" href="#">想看</a></li>
+                            <li><a class="dropdown-item" href="#">看过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="book.html" id="bookDropdown" role="button" aria-expanded="false">
+                            书籍
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="bookDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">图书标签</a></li>
+                            <li><a class="dropdown-item" href="#">分类浏览</a></li>
+                            <li><a class="dropdown-item" href="book.html">图书日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我读</h6></li>
+                            <li><a class="dropdown-item" href="#">在读</a></li>
+                            <li><a class="dropdown-item" href="#">想读</a></li>
+                            <li><a class="dropdown-item" href="#">读过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="music.html" id="musicDropdown" role="button" aria-expanded="false">
+                            音乐
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="musicDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">音乐标签</a></li>
+                            <li><a class="dropdown-item" href="#">浏览全部</a></li>
+                            <li><a class="dropdown-item" href="music.html">音乐日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我听</h6></li>
+                            <li><a class="dropdown-item" href="#">在听</a></li>
+                            <li><a class="dropdown-item" href="#">想听</a></li>
+                            <li><a class="dropdown-item" href="#">听过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="game.html" id="gameDropdown" role="button" aria-expanded="false">
+                            游戏
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="gameDropdown">
+                            <li><a class="dropdown-item" href="#">排行榜</a></li>
+                            <li><a class="dropdown-item" href="#">游戏标签</a></li>
+                            <li><a class="dropdown-item" href="#">平台浏览</a></li>
+                            <li><a class="dropdown-item" href="game.html">游戏日志</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">我玩</h6></li>
+                            <li><a class="dropdown-item" href="#">在玩</a></li>
+                            <li><a class="dropdown-item" href="#">想玩</a></li>
+                            <li><a class="dropdown-item" href="#">玩过</a></li>
+                            <li><a class="dropdown-item" href="#">搁置</a></li>
+                            <li><a class="dropdown-item" href="#">抛弃</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" id="navSearchForm">
+                    <input class="form-control me-2" type="search" placeholder="搜索作品...">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="navbar-nav ms-2" id="userActionsNav">
+                    <div id="loggedOutNav">
+                        <button type="button" class="btn btn-sm me-2 btn-nav-action" data-bs-toggle="modal" data-bs-target="#loginModalNav">登录</button>
+                        <button type="button" class="btn btn-sm btn-nav-action" data-bs-toggle="modal" data-bs-target="#registerModal">注册</button>
+                    </div>
+                    <div id="loggedInNav" style="display: none;">
+                        <a href="#" class="navbar-text me-2 text-decoration-none" id="welcomeUserText"></a>
+                        <button type="button" class="btn btn-sm btn-nav-action" id="navLogoutBtn">登出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login & Registration Modals -->
+    <div class="modal fade" id="loginModalNav" tabindex="-1" aria-labelledby="loginModalNavLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg"><div class="modal-content">
+            <div class="modal-body p-4"><button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button><h3 class="text-center mb-4 login-modal-title">登录至 Bangumi</h3><div class="row"><div class="col-md-7 pe-md-4"><form id="loginFormNav"><div class="mb-3"><label for="loginEmailNav" class="form-label">你的 Email 地址</label><input type="email" class="form-control" id="loginEmailNav" required></div><div class="mb-3"><label for="loginPasswordNav" class="form-label">你的密码</label><input type="password" class="form-control" id="loginPasswordNav" required></div><div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="rememberMeCheck"><label class="form-check-label small" for="rememberMeCheck">不保存我的登录状态</label></div><button type="submit" class="btn btn-primary w-100 btn-login-modal">登录</button></form></div><div class="col-md-5 ps-md-4 border-start-md mt-4 mt-md-0"><div class="mb-4"><p class="mb-2 small">还没有 Bangumi 账户?</p><button type="button" class="btn btn-sm btn-register-modal-alt" id="loginModalRegisterBtn">立即注册</button></div><div><p class="mb-2 small">忘记密码?</p><button type="button" class="btn btn-sm btn-light" id="loginModalResetPasswordBtn">重置密码</button></div></div></div></div><div class="modal-footer bg-light text-center d-block py-2"><small class="text-muted">旗下站点: <a href="#" class="text-decoration-none">bangumi</a> <a href="#" class="text-decoration-none">天窗</a> <a href="#" class="text-decoration-none">中文同人推广联盟</a></small></div>
+        </div></div>
+    </div>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg"><div class="modal-content">
+             <div class="modal-body p-4"><button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button><h3 class="text-center mb-4 login-modal-title">创建 Bangumi 账户</h3><div class="row justify-content-center"><div class="col-md-8"><form id="registrationForm"><div class="mb-3"><label for="registerEmail" class="form-label">你的 Email 地址</label><input type="email" class="form-control" id="registerEmail" required placeholder="例如: user@example.com"></div><div class="mb-3"><label for="registerPassword" class="form-label">设置密码</label><input type="password" class="form-control" id="registerPassword" required placeholder="至少6位字符"></div><div class="mb-3"><label for="registerConfirmPassword" class="form-label">确认密码</label><input type="password" class="form-control" id="registerConfirmPassword" required placeholder="再次输入密码"></div><button type="submit" class="btn btn-primary w-100 btn-login-modal mt-3">注册并登录</button></form><div class="text-center mt-3"><p class="small">已有账户? <a href="#" id="registerModalLoginLink" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModalNav">立即登录</a></p></div></div></div></div><div class="modal-footer bg-light text-center d-block py-2"><small class="text-muted">旗下站点: <a href="#" class="text-decoration-none">bangumi</a> <a href="#" class="text-decoration-none">天窗</a> <a href="#" class="text-decoration-none">中文同人推广联盟</a></small></div>
+        </div></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Main Content Column -->
+            <div class="col-lg-9">
+                <h2 id="profileUserNameHeader" class="h4 mb-3">Hi! [Username]</h2>
+
+                <!-- Progress Management Section -->
+                <section class="mb-4 p-3 bg-light rounded shadow-sm">
+                    <h5 class="h6">欢迎使用 Bangumi 管理收视进度</h5>
+                    <p class="small text-muted">在一天忙碌过后终于闲下来看动画，却忘记之前看到了哪里？只需要在动画或三次元条目的收藏盒收藏动画，Bangumi 就可以开始为你管理你的动画收视。以下是你可能感兴趣的番组：</p>
+                    <div class="row">
+                        <div class="col-md-3 col-6 mb-2">
+                            <div class="card profile-card-sm">
+                                <img src="https://lain.bgm.tv/pic/cover/m/92/97/975_YKuWd.jpg" class="card-img-top" alt="ONE PIECE">
+                                <div class="card-body">
+                                    <h6 class="card-title">ONE PIECE</h6>
+                                    <a href="#" class="btn btn-sm btn-outline-primary w-100">Add 添加到收藏</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-2">
+                            <div class="card profile-card-sm">
+                                <img src="https://lain.bgm.tv/pic/cover/m/01/88/899_Q3F3X.jpg" class="card-img-top" alt="名探偵コナン">
+                                <div class="card-body">
+                                    <h6 class="card-title">名探偵コナン</h6>
+                                    <a href="#" class="btn btn-sm btn-outline-primary w-100">Add 添加到收藏</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Activity Feed Section -->
+                <section>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="activityTypeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                动画
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="activityTypeDropdown">
+                                <li><a class="dropdown-item" href="#">动画</a></li>
+                                <li><a class="dropdown-item" href="#">书籍</a></li>
+                                <li><a class="dropdown-item" href="#">音乐</a></li>
+                                <li><a class="dropdown-item" href="#">游戏</a></li>
+                                <li><a class="dropdown-item" href="#">三次元</a></li>
+                            </ul>
+                        </div>
+                        <form class="d-flex ms-2 flex-grow-1">
+                            <input class="form-control form-control-sm" type="search" placeholder="搜索更多我在看的番组">
+                        </form>
+                    </div>
+
+                    <ul class="nav nav-tabs nav-fill nav-sm mb-3">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">动态</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">吐槽</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">收藏</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">进度</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">日志</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">更多</a></li>
+                    </ul>
+
+                    <div id="profileActivityFeed">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary btn-sm" id="updateActivityBtn">Update</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-3">
+                <section class="mb-4 sidebar-section">
+                    <h5>小组话题</h5>
+                    <ul class="list-unstyled" id="groupTopicsList"></ul>
+                    <a href="#" class="small text-muted">更多小组 »</a>
+                </section>
+
+                <section class="mb-4 sidebar-section">
+                    <h5>热门条目讨论</h5>
+                    <ul class="list-unstyled" id="hotDiscussionsList"></ul>
+                </section>
+
+                <section class="sidebar-section">
+                    <h5 id="dailyBroadcastSidebarTitle">每日放送</h5>
+                    <div id="dailyBroadcastSidebarContent"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Bangumi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">关于我们</a></li>
+                        <li><a href="#" class="text-decoration-none">加入我们</a></li>
+                        <li><a href="#" class="text-decoration-none">联系方式</a></li>
+                        <li><a href="#" class="text-decoration-none">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>旗下站点</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Bangumi 番组计划</a></li>
+                        <li><a href="#" class="text-decoration-none">天窗联盟</a></li>
+                        <li><a href="#" class="text-decoration-none">中文同人推广</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>关注我们</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-decoration-none me-2"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="text-decoration-none me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center text-muted small">&copy; 2025 Bangumi Clone. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script> 
+</body>
+</html>

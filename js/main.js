@@ -96,6 +96,24 @@ $(document).ready(function() {
 
     // Load user activities
     loadUserActivities();
+
+
+    $('body').css('visibility', 'visible');
+    if (typeof loadAllAnime === 'function') {
+        loadAnimePageLog('#anime-log-list');
+    }
+
+    if (typeof loadAnimePageLog === 'function') {
+        loadAnimePageLog();
+    }
+    if (typeof loadAnimePageDiscussions === 'function') {
+        loadAnimePageDiscussions('#latest-discussions-list');
+    }
+
+    $('.navbar-nav .nav-link').removeClass('active');
+    $('.navbar-nav .nav-link[href="game.html"]').addClass('active');
+    $('.navbar-nav .nav-item.dropdown .nav-link[href="game.html"]').closest('.nav-item.dropdown').find('.dropdown-toggle').addClass('active');
+    
 });
 
 // Load featured anime section
@@ -139,9 +157,9 @@ function createAnimeCard(anime, isFeatured) {
 }
 
 // Search functionality
-$('form').on('submit', function(e) {
+$('#navSearchForm').on('submit', function(e) {
     e.preventDefault();
-    const searchTerm = $(this).find('input').val().toLowerCase();
+    const searchTerm = $(this).find('input[type="search"]').val().toLowerCase();
     
     const filteredAnime = sampleAnimeData.filter(anime => 
         anime.title.toLowerCase().includes(searchTerm) || 
@@ -151,9 +169,11 @@ $('form').on('submit', function(e) {
     const $animeList = $('#featured-anime');
     $animeList.empty();
     
-    if (filteredAnime.length === 0) {
+    if (filteredAnime.length === 0 && searchTerm.trim() !== "") {
         $animeList.append('<div class="col-12 text-center py-5">没有找到相关作品</div>');
-    } else {
+    } else if (searchTerm.trim() === "" && filteredAnime.length === 0) {
+        loadFeaturedAnime(); }
+    else {
         filteredAnime.forEach(anime => {
             const card = createAnimeCard(anime, true);
             $animeList.append(card);
@@ -334,3 +354,141 @@ function loadAnimePageDiscussions() {
         });
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const usersKey = 'bangumiAppUsers';
+    const currentUserKey = 'bangumiAppCurrentUser';
+
+    const registrationForm = document.getElementById('registrationForm');
+    // const loginFormPanel = document.getElementById('loginFormPanel'); // REMOVED
+    const loginFormNav = document.getElementById('loginFormNav'); 
+    
+    const navLogoutBtn = document.getElementById('navLogoutBtn');
+    
+    const loggedOutNav = document.getElementById('loggedOutNav');
+    const loggedInNav = document.getElementById('loggedInNav');
+    const welcomeUserLink = document.getElementById('welcomeUserText');
+
+
+    const registerModalElement = document.getElementById('registerModal');
+    const registerModal = bootstrap.Modal.getOrCreateInstance(registerModalElement);
+    
+    const loginModalNavElement = document.getElementById('loginModalNav');
+    const loginModalNavInstance = bootstrap.Modal.getOrCreateInstance(loginModalNavElement);
+
+    const loginModalRegisterBtn = document.getElementById('loginModalRegisterBtn');
+    const loginModalResetPasswordBtn = document.getElementById('loginModalResetPasswordBtn');
+
+
+    function getUsers() {
+        return JSON.parse(localStorage.getItem(usersKey)) || [];
+    }
+
+    function saveUsers(users) {
+        localStorage.setItem(usersKey, JSON.stringify(users));
+    }
+
+    function setCurrentUser(email) {
+        localStorage.setItem(currentUserKey, email);
+    }
+
+    function getCurrentUser() {
+        return localStorage.getItem(currentUserKey);
+    }
+
+    function clearCurrentUser() {
+        localStorage.removeItem(currentUserKey);
+    }
+
+    function updateUI() {
+        const currentUserEmail = getCurrentUser();
+        if (currentUserEmail) {
+            loggedOutNav.style.display = 'none';
+            loggedInNav.style.display = 'flex'; 
+            welcomeUserText.textContent = `欢迎, ${currentUserEmail.split('@')[0]}`;
+            welcomeUserLink.href = 'profile.html';
+        } else {
+            loggedOutNav.style.display = 'flex';
+            loggedInNav.style.display = 'none';
+            welcomeUserText.textContent = '';
+            welcomeUserLink.href = '#';
+        }
+    }
+
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('密码不匹配!');
+                return;
+            }
+
+            const users = getUsers();
+            if (users.find(user => user.email === email)) {
+                alert('该Email已被注册!');
+                return;
+            }
+            users.push({ email, password });
+            saveUsers(users);
+            alert('注册成功! 请登录.');
+            registrationForm.reset();
+            registerModal.hide();
+            loginModalNavInstance.show();
+        });
+    }
+
+    function handleLoginAttempt(email, password) {
+        const users = getUsers();
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            setCurrentUser(email);
+            updateUI();
+            alert('登录成功!');
+            return true; 
+        } else {
+            alert('Email或密码错误.');
+            return false; 
+        }
+    }
+
+    if (loginFormNav) {
+        loginFormNav.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('loginEmailNav').value;
+            const password = document.getElementById('loginPasswordNav').value;
+            if (handleLoginAttempt(email, password)) {
+                loginModalNavInstance.hide(); 
+            }
+        });
+    }
+
+    if (navLogoutBtn) {
+        navLogoutBtn.addEventListener('click', () => {
+            clearCurrentUser();
+            updateUI();
+            alert('已登出.');
+        });
+    }
+
+    if (loginModalRegisterBtn) {
+        loginModalRegisterBtn.addEventListener('click', () => {
+            loginModalNavInstance.hide();
+            registerModal.show();
+        });
+    }
+
+    if (loginModalResetPasswordBtn) {
+        loginModalResetPasswordBtn.addEventListener('click', () => {
+            alert('密码重置功能暂未开放。');
+            // Optionally, you could hide the login modal and show another for password reset
+        });
+    }
+    
+    updateUI();
+});
