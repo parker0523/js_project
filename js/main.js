@@ -81,20 +81,15 @@ const userActivities = [
 
 // Initialize the page when DOM is ready
 $(document).ready(function() {
-    // Randomly change musume class
-    const randomMusume = Math.floor(Math.random() * 5) + 1; // Random number between 1 and 5
+    const randomMusume = Math.floor(Math.random() * 5) + 1;
     $('.navbar .bg').removeClass('musume_1').addClass(`musume_${randomMusume}`);
     
-    // Load featured anime
     loadFeaturedAnime();
-
-    // Load category items
     loadCategoryItems('anime', '#anime-category');
     loadCategoryItems('games', '#games-category');
     loadCategoryItems('books', '#books-category');
     loadCategoryItems('music', '#music-category');
 
-    // Load user activities
     loadUserActivities();
 
 
@@ -116,12 +111,10 @@ $(document).ready(function() {
     
 });
 
-// Load featured anime section
 function loadFeaturedAnime() {
     const $featuredSection = $('#featured-anime');
     $featuredSection.empty();
     
-    // Take first 3 anime for featured section
     sampleAnimeData.slice(0, 3).forEach(anime => {
         const card = createAnimeCard(anime, true);
         $featuredSection.append(card);
@@ -252,7 +245,7 @@ function loadAnimePageLog() {
                 animeName: "ギルドの受付嬢ですが、残業は嫌なのでボスをソロ討伐しようと思います",
                 time: "2小时前",
                 content: "剧情一般, 有些说不通或者靠气势解决一切的剧情, 反正是爽番就不用带脑子看了。画风个人很...",
-                plus: "(+1)" // Assuming you want the plus from previous examples
+                plus: "(+1)"
             },
             {
                 imgSrc: "https://lain.bgm.tv/pic/cover/s/4e/a0/770_EvrMq.jpg",
@@ -361,7 +354,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentUserKey = 'bangumiAppCurrentUser';
 
     const registrationForm = document.getElementById('registrationForm');
-    // const loginFormPanel = document.getElementById('loginFormPanel'); // REMOVED
     const loginFormNav = document.getElementById('loginFormNav'); 
     
     const navLogoutBtn = document.getElementById('navLogoutBtn');
@@ -486,7 +478,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginModalResetPasswordBtn) {
         loginModalResetPasswordBtn.addEventListener('click', () => {
             alert('密码重置功能暂未开放。');
-            // Optionally, you could hide the login modal and show another for password reset
         });
     }
     

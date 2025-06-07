@@ -476,6 +476,7 @@ function initializeUserRating() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    $('body').css('visibility', 'visible');
     loadStaffInfo();
     initializeCompleteness();
     loadRelatedWorks();
