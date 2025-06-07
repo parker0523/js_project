@@ -477,6 +477,13 @@ function initializeUserRating() {
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     $('body').css('visibility', 'visible');
+
+    if (typeof updateUI === 'function') {
+        updateUI();
+    } else {
+        console.warn('updateUI function not found. Ensure main.js is loaded before detail.js and defines updateUI.');
+    }
+    
     loadStaffInfo();
     initializeCompleteness();
     loadRelatedWorks();

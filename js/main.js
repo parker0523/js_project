@@ -83,6 +83,18 @@ const userActivities = [
 $(document).ready(function() {
     const randomMusume = Math.floor(Math.random() * 5) + 1;
     $('.navbar .bg').removeClass('musume_1').addClass(`musume_${randomMusume}`);
+
+    $('.navbar-nav .nav-link').removeClass('active'); 
+    const currentPage = window.location.pathname.split('/').pop();
+    $('.navbar-nav .nav-link').each(function() {
+        const href = $(this).attr('href');
+        if (href && href === currentPage) {
+            $(this).addClass('active');
+            if ($(this).hasClass('dropdown-toggle')) {
+                 $(this).closest('.nav-item.dropdown').addClass('active');
+            }
+        }
+    });
     
     loadFeaturedAnime();
     loadCategoryItems('anime', '#anime-category');
@@ -104,10 +116,6 @@ $(document).ready(function() {
     if (typeof loadAnimePageDiscussions === 'function') {
         loadAnimePageDiscussions('#latest-discussions-list');
     }
-
-    $('.navbar-nav .nav-link').removeClass('active');
-    $('.navbar-nav .nav-link[href="game.html"]').addClass('active');
-    $('.navbar-nav .nav-item.dropdown .nav-link[href="game.html"]').closest('.nav-item.dropdown').find('.dropdown-toggle').addClass('active');
     
 });
 
@@ -245,7 +253,7 @@ function loadAnimePageLog() {
                 animeName: "ギルドの受付嬢ですが、残業は嫌なのでボスをソロ討伐しようと思います",
                 time: "2小时前",
                 content: "剧情一般, 有些说不通或者靠气势解决一切的剧情, 反正是爽番就不用带脑子看了。画风个人很...",
-                plus: "(+1)"
+                plus: "(+1)",
             },
             {
                 imgSrc: "https://lain.bgm.tv/pic/cover/s/4e/a0/770_EvrMq.jpg",
@@ -300,21 +308,23 @@ function loadAnimePageLog() {
         ];
 
         sampleLogs.forEach(log => {
-            const logHtml = `
-                <div class="col-md-6">
-                    <div class="log-entry">
-                        <img src="${log.imgSrc}" alt="Anime Cover" class="log-entry-image">
-                        <div class="log-entry-details">
-                            <a href="#" class="log-entry-title">${log.title}</a>
-                            <div class="log-entry-meta">
-                                <a href="#">${log.user}</a> / ${log.action} <a href="#">${log.animeName}</a> / ${log.time}
-                            </div>
-                            <p class="log-entry-content">${log.content}</p>
-                            <div class="log-entry-plus">${log.plus}</div>
-                        </div>
+        const logHtml = `
+        <div class="col-md-6">
+            <div class="log-entry">
+                <a href="detail.html">
+                    <img src="${log.imgSrc}" alt="Anime Cover" class="log-entry-image">
+                </a>
+                <div class="log-entry-details">
+                    <a href="detail.html" class="log-entry-title">${log.title}</a>
+                    <div class="log-entry-meta">
+                        <a href="#">${log.user}</a> / ${log.action} <a href="#">${log.animeName}</a> / ${log.time}
                     </div>
-                </div>`;
-            $logContainer.append(logHtml);
+                    <p class="log-entry-content">${log.content}</p>
+                    <div class="log-entry-plus">${log.plus}</div>
+                </div>
+            </div>
+        </div>`;
+        $logContainer.append(logHtml);
         });
     }
 }

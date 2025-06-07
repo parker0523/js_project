@@ -165,5 +165,11 @@ function loadComments() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    $('body').css('visibility', 'visible');
+     if (typeof updateUI === 'function') {
+        updateUI();
+    } else {
+        console.warn('updateUI function not found. Ensure main.js is loaded before character.js and defines updateUI.');
+    }
     loadComments();
 }); 

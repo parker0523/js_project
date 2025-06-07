@@ -108,9 +108,111 @@
                         <i class="fas fa-search"></i>
                     </button>
                 </form>
+                <div class="navbar-nav ms-2" id="userActionsNav">
+                    <!-- Logged out state -->
+                    <div id="loggedOutNav">
+                        <button type="button" class="btn btn-sm me-2 btn-nav-action" data-bs-toggle="modal" data-bs-target="#loginModalNav">登录</button>
+                        <button type="button" class="btn btn-sm btn-nav-action" data-bs-toggle="modal" data-bs-target="#registerModal">注册</button>
+                    </div>
+                    <!-- Logged in state -->
+                    <div id="loggedInNav" style="display: none;">
+                        <a href="#" class="navbar-text me-2" id="welcomeUserText"></a>
+                        <button type="button" class="btn btn-sm btn-nav-action" id="navLogoutBtn">登出</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModalNav" tabindex="-1" aria-labelledby="loginModalNavLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="text-center mb-4 login-modal-title">登录至 Bangumi</h3>
+                    <div class="row">
+                        <div class="col-md-7 pe-md-4">
+                            <form id="loginFormNav">
+                                <div class="mb-3">
+                                    <label for="loginEmailNav" class="form-label">你的 Email 地址</label>
+                                    <input type="email" class="form-control" id="loginEmailNav" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPasswordNav" class="form-label">你的密码</label>
+                                    <input type="password" class="form-control" id="loginPasswordNav" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMeCheck">
+                                    <label class="form-check-label small" for="rememberMeCheck">不保存我的登录状态</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 btn-login-modal">登录</button>
+                            </form>
+                        </div>
+                        <div class="col-md-5 ps-md-4 border-start-md mt-4 mt-md-0">
+                            <div class="mb-4">
+                                <p class="mb-2 small">还没有 Bangumi 账户?</p>
+                                <button type="button" class="btn btn-sm btn-register-modal-alt" id="loginModalRegisterBtn">立即注册</button>
+                            </div>
+                            <div>
+                                <p class="mb-2 small">忘记密码?</p>
+                                <button type="button" class="btn btn-sm btn-light" id="loginModalResetPasswordBtn">重置密码</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light text-center d-block py-2">
+                    <small class="text-muted">旗下站点: 
+                        <a href="#" class="text-decoration-none">bangumi</a> 
+                        <a href="#" class="text-decoration-none">天窗</a> 
+                        <a href="#" class="text-decoration-none">中文同人推广联盟</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="text-center mb-4 login-modal-title">创建 Bangumi 账户</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <form id="registrationForm">
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">你的 Email 地址</label>
+                                    <input type="email" class="form-control" id="registerEmail" required placeholder="例如: user@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">设置密码</label>
+                                    <input type="password" class="form-control" id="registerPassword" required placeholder="至少6位字符">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerConfirmPassword" class="form-label">确认密码</label>
+                                    <input type="password" class="form-control" id="registerConfirmPassword" required placeholder="再次输入密码">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 btn-login-modal mt-3">注册并登录</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <p class="small">已有账户? 
+                                    <a href="#" id="registerModalLoginLink" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModalNav">立即登录</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light text-center d-block py-2">
+                    <small class="text-muted">旗下站点: 
+                        <a href="#" class="text-decoration-none">bangumi</a> 
+                        <a href="#" class="text-decoration-none">天窗</a> 
+                        <a href="#" class="text-decoration-none">中文同人推广联盟</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <div class="container mt-4">
@@ -256,6 +358,7 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/character.js"></script>
 </body>
 </html> 

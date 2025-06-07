@@ -490,6 +490,7 @@ footer a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
+    text-decoration: none;
     transition: transform 0.2s ease-in-out;
 }
 .scroll-image-item:hover {
@@ -601,7 +602,7 @@ footer a:hover {
     display: inline-block;
 }
 .latest-discussions-section .discussion-item-title:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .latest-discussions-section .discussion-item-anime {
     font-size: 0.8rem;
